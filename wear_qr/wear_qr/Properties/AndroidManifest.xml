@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="wear_qr.wear_qr" android:installLocation="preferExternal">
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="30" />
+	<uses-feature android:name="android.hardware.type.watch" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<!--this is necessary for Android v6+ to get the device name and address-->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true" android:theme="@android:style/Theme.DeviceDefault">
+		<uses-library android:name="com.google.android.wearable" android:required="true" />
+		<!--
+      Set to true if your app is Standalone, that is, it does not require the handheld
+      app to run.
+    -->
+		<meta-data android:name="com.google.android.wearable.standalone" android:value="true" />
+	</application>
+</manifest>
